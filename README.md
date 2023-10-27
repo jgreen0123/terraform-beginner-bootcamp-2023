@@ -177,16 +177,16 @@ If it is successful you should see a json payload return that looks like this:
 We will need to generate AWS CLI credentials from IAM user in order to use the AWS CLI.
 
 
-## Terraform Basics
+#### Terraform Basics
 
-### Terraform Registry
+#### Terraform Registry
 
 Terraform sources their providers and modules from the Terraform registry which is located at [registry.terraform.io](https://registry.terraform.io/)
 
 - **Providers** is an interface to API's that will allow you to create resources in terraform.
 - **Modules** are a way to refactor or make larges amounts of terraform code modular, portable and shareable.
 
-### Terraform Console
+#### Terraform Console
 
 We can see a list of all the Terraform commands by simply typing 'terraform'
 
@@ -212,13 +212,21 @@ This will run a plan and pass the change set to the executed by terraform. Apply
 
 If we want to automatically approve an apply, we can provide the --auto-approve flag eg. `terraform apply --auto-approve.`
 
-### Terraform Lock Files
+#### Terraform Destroy
+
+`terraform destroy`
+This will destroy resources 
+
+You can also use the auto approve flag to skip the approve prompt eg.
+`terraform apply --auto-approve`
+
+#### Terraform Lock Files
 
 `.terraform.lock.hcl` contains the locked versioning for the providers or modules that should be used with this project.
 
 The Terraform Loc File should be committed to your Version Control System (VCS) eg. Github
 
-### Terraform State Files
+#### Terraform State Files
 
 `.terraorm.tfstate` contains information about the current state o your infrastructure.
 
