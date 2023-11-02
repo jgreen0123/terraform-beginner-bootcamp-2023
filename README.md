@@ -262,3 +262,5 @@ open /home/gitpod/.terraform.d/credentials.tfrc.json
 Provide the following code (replace your token in the file):
 
 Then Open the file
+
+We have automated the rpocess using this workaround with the following bash script [bin/generate_tfrc_credentials](bin/generate_tfrc_credentials)
